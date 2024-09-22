@@ -5,11 +5,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
+    <main>
+        <header class="sticky top-0 z-[999]">
+            <nav>
+                <div class="w-full bg-[#F9F7F3]">
+                    <div class="flex  justify-between items-center max-w-screen-xl mx-auto p-4">
+                        <button
+                        id="blogPage"
+                            class="px-12 py-4 bg-[#B4F461] font-bold text-xl rounded-xl hidden md:block">Blog</button>
+                        <div class="flex items-center gap-2">
+                            <img src="./assets/logo.png" alt="Logo" class="w-8">
+                            <h1 class="font-bold text-xl">Donate Your Prayer</h1>
+                        </div>
+                        <div class="hidden md:flex items-center gap-2">
+                            <img src="./assets/coin.png" alt="Coin" class="w-8">
+                            <h1 id="mybalance" class="font-semibold">5500</h1><span class="font-semibold">BDT</span>
+                        </div>
+                        <div class="md:hidden">
+                            <div class="dropdown dropdown-end">
+                                <div tabindex="0" role="button" class="btn btn-circle">
+                                    <label class="btn btn-circle swap swap-rotate">
+                                        <!-- this hidden checkbox controls the state -->
+                                        <input type="checkbox" />
 
+                                        <!-- hamburger icon -->
+                                        <i class="fa-solid fa-bars swap-off fill-current"></i>
 
+                                        <!-- close icon -->
+                                        <i class="fa-solid fa-xmark swap-on fill-current"></i>
+                                    </label>
+                                </div>
+                                <ul tabindex="0"
+                                    class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                                    <li><a>Item 1</a></li>
+                                    <li><a>Item 2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex backdrop-blur-lg items-center justify-center py-12">
+                    <div>
+                        <button id="donateBtn"
+                            class="btn btn-active !bg-[#B4F461] border-none btn-outline">Donation</button>
+                        <button id="historyBtn" class="btn btn-outline">History</button>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- Donation Section -->
+        <section id="donatePage" class="max-w-screen-xl mx-auto my-12">
+            <!-- Card 1 -->
+            <div class="card card-side gap-4 bg-base-100 md:flex-row flex-col w-full px-4 shadow-2xl md:mt-12 md:p-12">
+                <figure class="w-full">
+                    <img src="./assets/noakhali.png" alt="Noakhali Floods" />
+                </figure>
+                <div class="card-body items-start px-2 w-full">
+                    <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#F3F3F3]">
+                        <img src="./assets/coin.png" alt="">
+                        <h1 class="font-semibold" id="currentDonate1">5500</h1><span class="font-semibold">BDT</span>
+                    </div>
+                    <h2 id="card-title1" class="card-title">Donate for Flood Relief in Noakhali, Bangladesh</h2>
+                    <p>The recent floods in Noakhali have caused massive damage to homes and infrastructure. Your
+                        donation can provide essential supplies to those affected. Every contribution counts. Help us
+                        support relief efforts.</p>
+                    <form class="card-body px-0 flex w-full">
+                        <div class="form-control">
+                            <input type="text" name="donate1" placeholder="Enter Donation Amount"
+                                class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button  id="donationHandle1"
+                                class="btn bg-[#B4F461] text-black">Donate Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card card-side gap-4 bg-base-100 md:flex-row flex-col w-full px-4 shadow-2xl md:mt-12 md:p-12">
+                <figure class="w-full">
+                    <img class="rounded-2xl" src="./assets/child_education.jpg" alt="Child Education" />
+                </figure>
+                <div class="card-body items-start px-2 w-full">
+                    <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#F3F3F3]">
+                        <img src="./assets/coin.png" alt="">
+                        <h1 class="font-semibold" id="currentDonate2">4500</h1><span class="font-semibold">BDT</span>
+                    </div>
+                    <h2 id="card-title2" class="card-title">Donate for Support Child Education in Rural Areas</h2>
+                    <p>Millions of children in rural Bangladesh lack access to education. Your donation will help build
+                        schools, provide books, and fund teachers' salaries to empower the next generation.</p>
+                    <form class="card-body px-0 flex w-full">
+                        <div class="form-control">
+                            <input type="text" name="donate2" placeholder="Enter Donation Amount"
+                                class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="donationHandle2"
+                                class="btn bg-[#B4F461] text-black">Donate Now</button>
+                        </div>
+                    </form>
+                </div>  
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card card-side gap-4 bg-base-100 md:flex-row flex-col w-full px-4 shadow-2xl md:mt-12 md:p-12">
+                <figure class="w-full ">
+                    <img class="rounded-2xl" src="./assets/healthcare.jpg" alt="Healthcare" />
+                </figure>
+                <div class="card-body items-start px-2 w-full">
+                    <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#F3F3F3]">
+                        <img src="./assets/coin.png" alt="">
+                        <h1 class="font-semibold" id="currentDonate3">3000</h1><span class="font-semibold">BDT</span>
+                    </div>
+                    <h2 id="card-title3" class="card-title"> Donate for Fund Healthcare Rural Communities</h2>
+                    <p>Access to healthcare in rural Bangladesh is limited. Your donation will help set up medical
+                        camps, purchase essential medicines, and provide treatment to those in need.</p>
+                    <form class="card-body px-0 flex w-full">
+                        <div class="form-control">
+                            <input type="text" name="donate3" placeholder="Enter Donation Amount"
+                                class="input input-bordered" required />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button onclick="my_modal_1.showModal()" id="donationHandle3"
+                                class="btn bg-[#B4F461] text-black">Donate Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal text-center">
+            <div class="modal-box flex flex-col items-center justify-center">
+                <h3 class="text-lg font-bold">Congratulations!</h3>
+                <p class="py-4 font-bold">You have donated to humankind successfully!</p>
+                <img src="./assets/coin.png" alt="coin image">
+                <div class="modal-action flex items-center justify-center">
+                    <form method="dialog">
+                        <div class="modal-action">
+                            <button id="modalBtn" class="btn">Close Confirmation</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <!-- History Section -->
+        <section id="historyPage" class="hidden max-w-screen-xl mx-auto flex flex-col gap-4 px-2">
+            <h1 class="text-center font-bold text-2xl">Donation History</h1>
+          </section>
+          
+    </main>
+
+    <script src="./Donate.js"></script>
+   
 </body>
 
 </html>
