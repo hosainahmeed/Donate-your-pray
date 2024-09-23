@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <main>
+    <header class="sticky top-0 z-[999]">
+      <nav>
+          <div class="w-full bg-[#F9F7F3]">
+              <div class="flex  justify-between items-center max-w-screen-xl mx-auto p-4">
+                  <button
+                  id="blogPage"
+                      class="px-12 py-4 bg-[#B4F461] font-bold text-xl rounded-xl hidden md:block">
+                    <a href="./index.html">Home</a>
+                    </button>
+                  <div class="flex items-center gap-2">
+                      <img src="./assets/logo.png" alt="Logo" class="w-8">
+                      <h1 class="font-bold text-xl">Donate Your Prayer</h1>
+                  </div>
+                  <div class="hidden md:flex items-center gap-2">
+                      <img src="./assets/coin.png" alt="Coin" class="w-8">
+                      <h1 id="mybalance" class="font-semibold">5500</h1><span class="font-semibold">BDT</span>
+                  </div>
+                  <div class="md:hidden">
+                      <div class="dropdown dropdown-end">
+                          <div tabindex="0" role="button" class="btn btn-circle">
+                              <label class="btn btn-circle">
+                                  <i class="fa-solid fa-bars swap-off fill-current"></i>
+                              </label>
+                          </div>
+                          <ul tabindex="0"
+                              class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                              <li><a href="./index.html">
+                                <i class="fa-solid fa-house"></i> home
+                              </a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </nav>
+
+  </header>
+
+    <div class="max-w-screen-xl mx-auto flex flex-col gap-2 mt-12 md:mt-28 px-2">
+      <div class="collapse collapse-arrow bg-base-200 ">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-bold">Bangladesh student protest???</div>
+        <div class="collapse-content">
+          <p>Bangladesh’s streets have again erupted with political violence. In early July, a university student
+            protest began over Bangladesh's job quota system that disproportionately benefits the descendants of
+            Bangladesh’s 1971 liberation war fighters, which many students view as unfair and outdated. Early last week,
+            peaceful protests turned violent as police and ruling party supporters violently dispersed crowds. At least
+            a half-dozen people died in early violence, including one man apparently shot by police with his hands
+            raised, while pro- and anti-government students clashed around the country.</p>
+
+          <p>With unrest and violence spiraling out of control on July 18, the government shut down internet and mobile
+            networks, deployed the military and imposed a curfew, which all remained in place through the weekend. As of
+            Sunday evening, news outlets reported that the protest’s death toll exceeded 130 and is likely to rise.</p>
+
+          <p>
+            USIP’s Geoffrey Macdonald discusses the drivers of the protests, why they are turning violent and what this
+            tells us about the state of Bangladesh's politics.
+          </p>
+
+          <h1 class="text-xl font-bold">What is driving these protests?</h1>
+          <p>
+            Macdonald: Bangladesh’s quota system was the spark for these protests. Shortly after Bangladesh’s
+            independence in 1971, the government established a system of quotas for government jobs that mandated 30
+            percent of positions go to liberation war fighters. Over the decades, the benefit was modified to include
+            the children and grandchildren of freedom fighters, persons with disabilities, ethnic minorities and others,
+            totaling 56 percent of government jobs. In 2018, a similar student movement successfully compelled the
+            government to scrap the quota system altogether. The issue was mostly settled until this June when
+            Bangladesh’s high court ruled that ending the quota system was unconstitutional, effectively reinstating it.
+          </p>
+
+          <p>
+            The government appealed the high court’s decision, but the prospect of the quota system’s return drove
+            students to the street. The initial protests in early July were small but persistent and met with occasional
+            violence from pro-government Awami League (AL) supporters, namely its student wing Bangladesh Chhatra League
+            (BCL). The confrontation escalated when Prime Minister Sheikh Hasina equated the protesters to “razakars,” a
+            derogatory term (translated as “volunteer”) referring to those who collaborated with Pakistani forces to
+            fight against Bangladesh’s independence in the 1971 war. In response, the protesters adopted the term as
+            their own, declaring, “We are razakars” and calling the prime minister an autocrat.
+          </p>
+          <a target="_blank" href="https://www.usip.org/publications/2024/07/whats-behind-bangladeshs-student-protests"
+            class="text-blue-500 underline">read more</a>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-bold">Untold stories of the uneducated</div>
+        <div class="collapse-content">
+          <p>According to Victor Hugo, ‘’He who opens a school door, closes a prison’’. He spoke as if systematic
+            instructions were somewhat a palpable sense of emancipation. Well, Education has undeniably propelled the
+            world into eras unimaginable. However, it has set humanity centuries backwards because society has become a
+            prison in itself, impoverished of the things that truly matter and replaced them with fabricated standards
+            of
+            achievement.</p>
+
+          <p>The education system has led to a systemized world which breeds the same narcissistic characters,
+            generating
+            similar thoughts from unchangeable syllabuses. High achievers of great intellect strive to earn top
+            positions
+            in modern industrial buildings erected from the ground by people considered prisoners deprived of life’s
+            goodness, they care only to obtain power, vanity and material stitched by hands that know nothing about
+            academia.</p>
+
+          <p>White collar jobs are the reward after a four-year agonizing period of mastered information and scribbled
+            notes, these jobs have left a legacy only to bellies they have fed, paving no way for social beneficial
+            change
+            or equality.</p>
+
+          <p>Critics often say third world nations are living in vaults of ignorance due to their level of intellect,
+            but
+            is that really the case? Isn’t ignorance working tooth and nail for perishables that depict a life of
+            middle-class, a taste that eschews its environment and cares nothing on the conditions and methods of their
+            consumption. Only to surround one-self with aesthetic designs which have been marketed the same for decades.
+          </p>
+
+          <p>Majority of people are in an education system to secure a future they are uncertain of, rather than to
+            create
+            a future they will be happy with, so how do we close the doors to a prison, when school has become the
+            prison?
+            in which captives trek the walk of this system in uniforms, carrying bricks of books on their backs while
+            sitting in rooms plastered with dull paint.</p>
+          <a target="_blank"
+            href="https://nuhafoundation.org/home/blog/bloggingentries/2018/adult/untold-stories-of-the-uneducated/"
+            class="text-blue-500 underline">read more</a>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./Donate.js"></script>
+</body>
+
+</html>

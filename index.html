@@ -23,30 +23,22 @@
                             class="px-12 py-4 bg-[#B4F461] font-bold text-xl rounded-xl hidden md:block">Blog</button>
                         <div class="flex items-center gap-2">
                             <img src="./assets/logo.png" alt="Logo" class="w-8">
-                            <h1 class="font-bold text-xl">Donate Your Prayer</h1>
+                            <h1 class="font-bold text-xs md:text-xl">Donate Your Prayer</h1>
                         </div>
-                        <div class="hidden md:flex items-center gap-2">
+                        <div class="text-xs md:text-base md:flex items-center gap-2">
                             <img src="./assets/coin.png" alt="Coin" class="w-8">
                             <h1 id="mybalance" class="font-semibold">5500</h1><span class="font-semibold">BDT</span>
                         </div>
                         <div class="md:hidden">
                             <div class="dropdown dropdown-end">
                                 <div tabindex="0" role="button" class="btn btn-circle">
-                                    <label class="btn btn-circle swap swap-rotate">
-                                        <!-- this hidden checkbox controls the state -->
-                                        <input type="checkbox" />
-
-                                        <!-- hamburger icon -->
-                                        <i class="fa-solid fa-bars swap-off fill-current"></i>
-
-                                        <!-- close icon -->
-                                        <i class="fa-solid fa-xmark swap-on fill-current"></i>
-                                    </label>
+                                        <i class="fa-solid fa-bars swap-off fill-current"></i>                          
                                 </div>
                                 <ul tabindex="0"
                                     class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                                    <li><a>Item 1</a></li>
-                                    <li><a href="./blog.html">Blog</a></li>
+                                    <li><a href="./blog.html">
+                                        <i class="fa-solid fa-blog"></i> Blog
+                                    </a></li>
                                 </ul>
                             </div>
                         </div>
