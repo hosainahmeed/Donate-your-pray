@@ -46,3 +46,58 @@ historyBtn.addEventListener("click", function () {
 });
 // swap end
 
+// there is all code for donate 
+function handleDonation(donateHandle, inputName, currentDonate, cardTitle) {
+  donateHandle.addEventListener("click", function (e) {
+    e.preventDefault();
+    let form = e.target.form;
+    let donateAmount = form.querySelector(`input[name='${inputName}']`).value;
+
+    if (isNaN(donateAmount) || donateAmount.trim() === "") {
+      return alert(
+        "Please enter a valid numeric value for the donation amount."
+      );
+    }
+
+    donateAmount = parseFloat(donateAmount);
+    if (donateAmount <= 0) {
+      return alert("Invalid donation amount.");
+    }
+
+    let balance = parseFloat(mybalance.innerText);
+    if (balance < donateAmount) {
+      return alert("Insufficient balance.");
+    }
+
+    if (balance >= donateAmount) {
+      let publicDonation = balance - donateAmount;
+      mybalance.innerText = publicDonation.toFixed(2);
+      let cardCurrentBalance = parseFloat(currentDonate.innerText);
+      let newBalance = cardCurrentBalance + donateAmount;
+      currentDonate.innerText = newBalance.toFixed(2);
+
+      let div = document.createElement("div");
+      div.classList.add("stats", "shadow", "border", "w-full");
+      div.innerHTML = `
+        <div class="stat w-full">
+          <p class="text-xl font-semibold">${donateAmount} Taka is donated to ${
+        cardTitle.innerText
+      }</p>
+          <p>Date : ${new Date().toLocaleString()}</p>
+        </div>
+      `;
+      historyPage.appendChild(div);
+
+      if (typeof my_modal_1 !== "undefined") {
+        my_modal_1.showModal();
+      } else {
+        console.error("Modal reference (my_modal_1) is not defined.");
+      }
+    }
+  });
+}
+
+// common function call
+handleDonation(donateHandle1, "donate1", currentDonate1, card_title1);
+handleDonation(donateHandle2, "donate2", currentDonate2, card_title2);
+handleDonation(donateHandle3, "donate3", currentDonate3, card_title3);
